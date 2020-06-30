@@ -41,20 +41,14 @@ export class AppComponent {
   incrementar() {
     console.log("Incrementar");
     this.store.dispatch(actions.incrementar());
-    //this.contador++;
   }
 
   cambiarStateUser(){
-    console.log(usuarios);
-    //console.log(tokenR);
-    let user:UserState = usuarios[Math.floor(Math.random() * 3)];
-    //console.log(user);
+    let user: UserState = usuarios[Math.floor(Math.random() * 3)];
     this.storeUser.dispatch(actionsUser.incioSession({ user }));
   }
 
   decrementar() {
-    console.log("Decrementar");
     this.store.dispatch(actions.decrementar());
-    //this.contador = this.contador != 0 ? this.contador - 1 : 0;
   }
 }

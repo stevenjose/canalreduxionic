@@ -16,7 +16,7 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { HijoComponent } from "./contador/hijo/hijo.component";
 import { NietoComponent } from "./contador/nieto/nieto.component";
-import { userReducer } from './contador/user.reducers';
+import { userReducer } from "./contador/user.reducers";
 
 @NgModule({
   declarations: [AppComponent, HijoComponent, NietoComponent],
@@ -25,7 +25,10 @@ import { userReducer } from './contador/user.reducers';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    StoreModule.forRoot({ contador: contadorReducer, user: userReducer }),
+    StoreModule.forRoot({
+      contador: contadorReducer,
+      token: userReducer,
+    }),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode

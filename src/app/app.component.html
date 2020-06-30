@@ -10,26 +10,29 @@
         </div>
       </ion-col>
       <ion-col size="12">
-        <p class="mt-4">
+        <p>
           Redux es un contenedor predecible del estado de aplicaciones
           JavaScript. Te ayuda a escribir aplicaciones que se comportan de
           manera consistente, corren en distintos ambientes (cliente, servidor y
           nativo), y son fáciles de probar. Además de eso, provee una gran
           experiencia de desarrollo, gracias a edición en vivo combinado con un
           depurador sobre una línea de tiempo. Puedes usar Redux combinado con
-          React, o cual cualquier otra librería de vistas. Es muy pequeño (2kB)
-          y no tiene dependencias.
+          React, o cual cualquier otra librería de vistas.
         </p>
       </ion-col>
-      <ion-col size="6">
-        <ion-text color="primary">
-          <h2>Contador:</h2>
-        </ion-text>
-      </ion-col>
-      <ion-col size="6">
-        <ion-text color="success">
-          <h2>{{ contador }}</h2>
-        </ion-text>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-text color="primary">
+              <h3>Contador AppComponent</h3>
+            </ion-text>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="success">
+              <h4 text-center>Contador:{{ contador }}</h4>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
     <ion-row>

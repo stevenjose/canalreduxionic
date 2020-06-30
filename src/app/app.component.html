@@ -1,3 +1,62 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="col text-center">
+          <img
+            src="https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67"
+            height="60"
+          />
+        </div>
+      </ion-col>
+      <ion-col size="12">
+        <p class="mt-4">
+          Redux es un contenedor predecible del estado de aplicaciones
+          JavaScript. Te ayuda a escribir aplicaciones que se comportan de
+          manera consistente, corren en distintos ambientes (cliente, servidor y
+          nativo), y son fáciles de probar. Además de eso, provee una gran
+          experiencia de desarrollo, gracias a edición en vivo combinado con un
+          depurador sobre una línea de tiempo. Puedes usar Redux combinado con
+          React, o cual cualquier otra librería de vistas. Es muy pequeño (2kB)
+          y no tiene dependencias.
+        </p>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text color="primary">
+          <h2>Contador:</h2>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text color="success">
+          <h2>{{ contador }}</h2>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <app-hijo></app-hijo>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="col size=12">
+          <ion-button (click)="incrementar()" expand=block>
+            Incrementar
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button (click)="decrementar()" expand=block>
+          Decrementar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="cambiarStateUser()" expand="block">
+          USER
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
